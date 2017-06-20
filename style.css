@@ -1,3 +1,18 @@
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+nav,
+h3,
+h1 {
+    text-transform: uppercase;
+}
+
+.main p {
+    border-bottom: solid 2px lightgrey;
+    padding: 20px 0px;
+}
+
 .parent {
     display: flex;
     justify-content: center;
@@ -12,6 +27,7 @@
 header {
     display: flex;
     justify-content: center;
+    margin: 50px; 0px;
 }
 
 nav {
@@ -40,13 +56,22 @@ nav ul li {
     margin: auto;
 }
 nav a {
-    padding: 19px;
+    padding: 18px;
     color: black;
     text-decoration: none;
 }
 
+.logind {
+    cursor: pointer;
+}
+
+.slidedown {
+    display: none;
+}
+
 .main {
     display: flex;
+    margin-top: 20px;
 }
 
 .aboutMe {
@@ -61,6 +86,28 @@ nav a {
 .aboutMe a {
     color: #333;
     font-size: 30px;
+}
+
+.articles {
+    display: flex;
+    flex-flow: column;
+    max-width: 75%;
+}
+
+.container {
+    margin-bottom: 20px;
+    max-width: 50%;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.moveUp {
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 article h3{
@@ -79,4 +126,20 @@ nav a:hover {
 .aboutMe a:hover {
     color: black;
     font-size: 30px;
+}
+
+/* Media Query */
+
+@media screen and (max-width: 800px)
+{
+    .main {
+        display: flex;
+        flex-direction: column;
+    }
+    .aboutMe {
+        max-width: 100%;
+    }
+    .articles {
+        max-width: 100%;
+    }
 }
